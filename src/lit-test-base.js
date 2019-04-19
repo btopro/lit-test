@@ -32,6 +32,7 @@ export class LitTest extends LitElement {
   constructor() {
     super();
     this.greeting = 'hello';
+    import('@lrnwebcomponents/multiple-choice/multiple-choice.js');
   }
   /**
    * Style definitions returned in an array of CSSResults can be optomized
