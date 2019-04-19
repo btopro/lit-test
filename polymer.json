@@ -9,19 +9,29 @@
   "lint": {
     "rules": ["polymer-3"]
   },
-  "sources": [
-    "node_modules/@polymer/iron-demo-helpers/**/*.js",
-    "node_modules/@lingolive/**/*.js",
-    "node_modules/@webcomponents/**/*.js",
-    "node_modules/wct-browser-legacy/**/*.js"
-  ],
   "moduleResolution": "node",
-  "npm": true
+  "npm": true,
   "builds": [
       {
-          "name": "es5-bundled",
+          "name": "es5-broken",
           "js": {
-            "compile": "es5",
+            "compile": true,
+            "minify": true,
+            "transformModulesToAmd": true
+          },
+          "css": {
+            "minify": true
+          },
+          "html": {
+            "minify": true
+          },
+          "bundle": false,
+          "addServiceWorker": false
+        },
+    {
+          "name": "es5-notbroken",
+          "js": {
+            "compile": true,
             "minify": true,
             "transformModulesToAmd": true
           },
